@@ -1,0 +1,25 @@
+.difficultySelect {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.button {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 15px;
+    width: 180px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.play-button {
+    background-color: #4cb652;
+    color: white;
+    font-weight: bold;
+}
+
+.reset-button:hover {
+    background-color: grey;
+    color: white;
+}
