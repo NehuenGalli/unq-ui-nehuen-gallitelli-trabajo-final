@@ -27,7 +27,8 @@ export default function HomePage() {
     const handlepLay = async () => {
         try {
             const session = await getSession(selectedDifficulty.id);
-            navigate(`/game/${session.sessionId}`)
+            navigate(`/game/${session.sessionId}`);
+            localStorage.setItem("session", JSON.stringify(session));
         } catch (error) {
             console.error(error);
         }

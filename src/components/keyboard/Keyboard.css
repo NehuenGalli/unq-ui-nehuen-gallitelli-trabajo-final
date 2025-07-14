@@ -1,0 +1,132 @@
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1.5rem auto;
+  max-width: 37.5rem; /* 600px */
+  padding: 1rem;
+}
+
+.key-row {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.key {
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #d3d6da;
+  color: #2c2e30;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.key:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.key:active {
+  transform: translateY(1px);
+}
+
+/* Teclas especiales */
+.key.enter, .key.backspace {
+  font-size: 0.9rem;
+  width: 4.5rem; /* 72px */
+}
+
+.key.backspace {
+  font-size: 1.2rem;
+}
+
+/* Estados de las teclas */
+.key.correct {
+  background-color: #6aaa64;
+  color: white;
+}
+
+.key.elsewhere {
+  background-color: #c9b458;
+  color: white;
+}
+
+.key.absent {
+  background-color: #787c7e;
+  color: white;
+}
+
+/* Media Queries para diferentes tamaños */
+@media (max-width: 768px) {
+  .keyboard {
+    gap: 0.4rem;
+    padding: 0.8rem;
+  }
+  
+  .key-row {
+    gap: 0.4rem;
+  }
+  
+  .key {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+  }
+  
+  .key.enter, .key.backspace {
+    width: 4rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .keyboard {
+    gap: 0.3rem;
+    padding: 0.5rem;
+  }
+  
+  .key-row {
+    gap: 0.3rem;
+  }
+  
+  .key {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+  }
+  
+  .key.enter, .key.backspace {
+    width: 3rem;
+    font-size: 0.7rem;
+  }
+  
+  .key.backspace {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .key {
+    width: 1.7rem;
+    height: 1.7rem;
+    font-size: 0.8rem;
+  }
+  
+  .key.enter, .key.backspace {
+    width: 2.5rem;
+  }
+}
