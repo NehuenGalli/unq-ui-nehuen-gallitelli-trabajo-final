@@ -54,17 +54,17 @@
 
 /* Estados de las teclas */
 .key.correct {
-  background-color: #6aaa64;
+  background-color: #6aaa64 !important;
   color: white;
 }
 
 .key.elsewhere {
-  background-color: #c9b458;
+  background-color: #c9b458 !important;
   color: white;
 }
 
 .key.absent {
-  background-color: #787c7e;
+  background-color: #787c7e !important;
   color: white;
 }
 
