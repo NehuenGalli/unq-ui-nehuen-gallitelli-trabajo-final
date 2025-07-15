@@ -4,9 +4,9 @@
 
 - Tener [Node.js](https://nodejs.org/) instalado en tu computadora.
 
-## Instalacion
+## Instalación
 
-### 1 Clonar el repositorio e instalar las dependencias. 
+### 1-Clonar el repositorio e instalar las dependencias. 
 
 ```bash
 git clone https://github.com/NehuenGalli/unq-ui-nehuen-gallitelli-trabajo-final
@@ -14,7 +14,7 @@ cd unq-ui-nehuen-gallitelli-trabajo-final
 npm install 
 ```
 
-### 2 Ejecución local
+### 2-Ejecución local
 
 ```bash
 npm run dev
