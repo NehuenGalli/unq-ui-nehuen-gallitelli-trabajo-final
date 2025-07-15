@@ -4,12 +4,12 @@ export default function SelectedDifficulty ({selectedDifficulty, onReset, onPlay
 
     return (
         <div className="container">
-            <p className="difficultySelect">Dificultad seleccionada: {selectedDifficulty.name}</p> 
+            <p className="difficultySelect">Selected difficulty: {selectedDifficulty.name}</p> 
             <button className="button play-button" onClick={onPlay}> 
-                Jugar
+                Play
             </button>
             <button className="button reset-button" onClick={() => onReset(null)}>
-                Cambiar dificultad
+                Change difficulty
             </button>
         </div>
     )

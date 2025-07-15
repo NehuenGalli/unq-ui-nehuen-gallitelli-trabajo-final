@@ -17,13 +17,16 @@ ul {
 }
 
 .difficulty-button {
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px;
-    border-radius: 15px;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 12px;
+    width: 200px;
+    border: none;
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #d3d3d3;
 }
 
 .difficulty-button:hover {

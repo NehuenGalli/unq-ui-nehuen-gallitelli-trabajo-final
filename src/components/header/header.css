@@ -5,7 +5,7 @@
     gap: 1.5rem;
     padding: 1.5rem 0;
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 8rem;
 }
 
 .header-top-row {
@@ -29,7 +29,6 @@
     margin: 0;
     font-weight: 500;
     padding-top: 1rem;
-    padding-bottom: 1rem;
     width: 100%;
     max-width: 300px;
 }
@@ -46,21 +45,15 @@
     }
 
     .header-title {
-        font-size: 2rem;
+        font-size: 3rem;
         letter-spacing: 0.05em;
     }
 
     .header-logo {
-        height: 2rem;
+        height: 3rem;
     }
 
     .header-subtitle {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 }

@@ -41,10 +41,10 @@ export default function HomePage() {
 
     return (
         <div>
-            {<Header />}
+            {<Header showSubtitle={!selectedDifficulty} />}
             <div>
                 {loadingDifficulties ? (
-                    < Spinner />
+                    <Spinner />
                 ) : selectedDifficulty ? (
                     <SelectedDifficulty selectedDifficulty={selectedDifficulty} onReset={setSelectedDifficulty} onPlay={handlepLay} />
                 ) : (
