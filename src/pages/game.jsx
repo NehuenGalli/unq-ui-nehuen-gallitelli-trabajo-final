@@ -29,8 +29,8 @@ export default function GamePage() {
       if (gameStatus !== "playing" || isVerifying) return;
 
       if (key === "ENTER") {
-        if (currentGuess.length < wordLength) { 
-          toast.error("The word must have ${wordLength} letters");
+        if (currentGuess.length < wordLength) {
+          toast.error(`The word must have ${wordLength} letters`);
           return;
         }
         submitGuess(currentGuess); 
