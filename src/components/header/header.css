@@ -1,0 +1,59 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 8rem;
+}
+
+.header-top-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+.header-subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
+    padding-top: 1rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+.header-logo {
+    height: 4rem;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .header {
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+
+    .header-title {
+        font-size: 3rem;
+        letter-spacing: 0.05em;
+    }
+
+    .header-logo {
+        height: 3rem;
+    }
+
+    .header-subtitle {
+        font-size: 1.5rem;
+    }
+}

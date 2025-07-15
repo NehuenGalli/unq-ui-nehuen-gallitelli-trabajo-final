@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.item-list {
+    list-style: none;
+    width: 180px;
+    padding-bottom: 20px;
+}
+
+.difficulty-button {
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 12px;
+    width: 200px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #d3d3d3;
+}
+
+.difficulty-button:hover {
+    background-color: #4cb652;
+    color: white;
+}

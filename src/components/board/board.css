@@ -1,0 +1,11 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7rem;
+  margin-bottom: 4rem;
+}
+
+.row {
+  display: flex;
+}
