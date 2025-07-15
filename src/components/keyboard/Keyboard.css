@@ -3,7 +3,8 @@
   flex-direction: column;
   gap: 0.5rem;
   margin: 1.5rem auto;
-  max-width: 37.5rem; /* 600px */
+  max-width: 37.5rem;
+  /* 600px */
   padding: 1rem;
 }
 
@@ -43,9 +44,11 @@
 }
 
 /* Teclas especiales */
-.key.enter, .key.backspace {
+.key.enter,
+.key.backspace {
   font-size: 0.9rem;
-  width: 4.5rem; /* 72px */
+  width: 4.5rem;
+  /* 72px */
 }
 
 .key.backspace {
@@ -74,19 +77,20 @@
     gap: 0.4rem;
     padding: 0.8rem;
   }
-  
+
   .key-row {
     gap: 0.4rem;
   }
-  
+
   .key {
     width: 2.5rem;
     height: 2.5rem;
     font-size: 1rem;
     border-radius: 0.4rem;
   }
-  
-  .key.enter, .key.backspace {
+
+  .key.enter,
+  .key.backspace {
     width: 4rem;
     font-size: 0.8rem;
   }
@@ -97,23 +101,24 @@
     gap: 0.3rem;
     padding: 0.5rem;
   }
-  
+
   .key-row {
     gap: 0.3rem;
   }
-  
+
   .key {
     width: 2rem;
     height: 2rem;
     font-size: 0.9rem;
     border-radius: 0.3rem;
   }
-  
-  .key.enter, .key.backspace {
+
+  .key.enter,
+  .key.backspace {
     width: 3rem;
     font-size: 0.7rem;
   }
-  
+
   .key.backspace {
     font-size: 1rem;
   }
@@ -125,8 +130,9 @@
     height: 1.7rem;
     font-size: 0.8rem;
   }
-  
-  .key.enter, .key.backspace {
+
+  .key.enter,
+  .key.backspace {
     width: 2.5rem;
   }
 }

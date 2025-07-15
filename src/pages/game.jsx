@@ -10,7 +10,7 @@ export default function GamePage() {
   const { sessionId } = useParams();
   const navigate = useNavigate();
 
-    const [session, setSession] = useState(() => {
+  const [session, setSession] = useState(() => {
     const savedSession = JSON.parse(localStorage.getItem("session"));
     return savedSession?.sessionId === sessionId ? savedSession : null;
   });

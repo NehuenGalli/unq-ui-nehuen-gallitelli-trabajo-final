@@ -8,7 +8,6 @@ export default function Board({ guesses, currentWord, wordLength, maxTries }) {
 
   return (
     <div className="board">
-      {/* Palabras ya intentadas con animación */}
       {guesses.map((guess, i) => (
         <div className="row" key={`guess-${i}`}>
           {guess.map((box, j) => (
@@ -17,13 +16,12 @@ export default function Board({ guesses, currentWord, wordLength, maxTries }) {
               letter={box.letter}
               status={box.solution}
               animating={box.animating}
-              delay={j} // importante para animar en secuencia
+              delay={j}
             />
           ))}
         </div>
       ))}
 
-      {/* Palabra que el usuario está escribiendo */}
       {showCurrentRow && (
         <div className="row" key="currentWord">
           {[...Array(wordLength)].map((_, i) => (
@@ -32,7 +30,6 @@ export default function Board({ guesses, currentWord, wordLength, maxTries }) {
         </div>
       )}
 
-      {/* Filas vacías restantes */}
       {[...Array(Math.max(emptyRows, 0))].map((_, i) => (
         <div className="row" key={`empty-${i}`}>
           {[...Array(wordLength)].map((_, j) => (

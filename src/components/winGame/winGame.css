@@ -48,9 +48,11 @@
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
   }
@@ -60,11 +62,11 @@
   .result-screen.win h1 {
     font-size: 2.5rem;
   }
-  
+
   .result-screen.win p {
     font-size: 1.2rem;
   }
-  
+
   .result-screen.win button {
     padding: 0.8rem 2rem;
     font-size: 1rem;
@@ -75,11 +77,11 @@
   .result-screen.win h1 {
     font-size: 2rem;
   }
-  
+
   .result-screen.win p {
     font-size: 1rem;
   }
-  
+
   .result-screen.win button {
     padding: 0.6rem 1.5rem;
     font-size: 0.9rem;
