@@ -10,10 +10,10 @@ export default function GamePage() {
   const { sessionId } = useParams();
   const navigate = useNavigate();
 
-  const session = (() => {
-    const saved = JSON.parse(localStorage.getItem("session"));
-    return saved?.sessionId === sessionId ? saved : null;
-  })();
+    const [session, setSession] = useState(() => {
+    const savedSession = JSON.parse(localStorage.getItem("session"));
+    return savedSession?.sessionId === sessionId ? savedSession : null;
+  });
 
   const [currentGuess, setCurrentGuess] = useState("");
   const [guesses, setGuesses] = useState([]);
@@ -22,7 +22,7 @@ export default function GamePage() {
   const [gameStatus, setGameStatus] = useState("playing");
 
   const wordLength = session?.wordLenght ?? 5;
-  const maxTries = 6;
+  const maxTries = 2;
 
   const handleKeyPress = useCallback(
     (key) => {
