@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router';
 import { getDifficulty, getSession,  } from '../services/wordApi';
 import DifficultyList from '../components/difficultyList/difficultyLIst';
 import SelectedDifficulty from '../components/selectedDifficulty/selectedDifficulty';
+import { toast } from 'react-toastify';
 
 
 export default function HomePage() {
@@ -17,10 +18,9 @@ export default function HomePage() {
             setLoadingDifficulties(true);
             const res = await getDifficulty(); 
             setDifficulties(res); 
-            console.log(JSON.stringify(res) + "En HomePage.jsx");
             setLoadingDifficulties(false); 
         } catch (error) {
-            console.error("Error fetching difficulties:", error);
+            toast.error("Error fetching difficulties");
         }
     }
 
@@ -30,7 +30,7 @@ export default function HomePage() {
             navigate(`/game/${session.sessionId}`);
             localStorage.setItem("session", JSON.stringify(session));
         } catch (error) {
-            console.error(error);
+            toast.error("Error starting game");
         }
     }
 
