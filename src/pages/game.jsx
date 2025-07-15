@@ -22,7 +22,7 @@ export default function GamePage() {
   const [gameStatus, setGameStatus] = useState("playing");
 
   const wordLength = session?.wordLenght ?? 5;
-  const maxTries = 2;
+  const maxTries = 6;
 
   const handleKeyPress = useCallback(
     (key) => {
