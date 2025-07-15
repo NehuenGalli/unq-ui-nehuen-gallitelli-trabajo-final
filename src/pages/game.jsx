@@ -29,11 +29,11 @@ export default function GamePage() {
       if (gameStatus !== "playing" || isVerifying) return;
 
       if (key === "ENTER") {
-        if (currentGuess.length < wordLength) {
-          toast.error(`La palabra debe tener ${wordLength} letras`);
+        if (currentGuess.length < wordLength) { 
+          toast.error("The word must have ${wordLength} letters");
           return;
         }
-        submitGuess(currentGuess);
+        submitGuess(currentGuess); 
       } else if (key === "⌫") {
         setCurrentGuess((prev) => prev.slice(0, -1));
       } else if (/^[A-Z]$/.test(key) && currentGuess.length < wordLength) {
@@ -54,12 +54,12 @@ export default function GamePage() {
       updateKeyStatuses(result);
 
       if (result.every((r) => r.solution === "correct")) {
-        toast.success("¡Adivinaste la palabra!");
+        toast.success("You guessed the word!");
         setGameStatus("won");
         localStorage.removeItem("session");
         navigate(ROUTES.GAME_WIN);
       } else if (guesses.length + 1 >= maxTries) {
-        toast.error("¡Perdiste!");
+        toast.error("You lost!");
         setGameStatus("lost");
         localStorage.removeItem("session");
         navigate(ROUTES.GAME_OVER);
@@ -67,7 +67,7 @@ export default function GamePage() {
 
       setCurrentGuess("");
     } catch (err) {
-      toast.error("Palabra inválida");
+      toast.error("Invalid word");
     } finally {
       setTimeout(() => {
         setGuesses((prev) =>
@@ -114,7 +114,7 @@ export default function GamePage() {
 
   useEffect(() => {
     if (!session || session.sessionId !== sessionId) {
-      toast.error("Sesión inválida");
+      toast.error("Invalid session");
       navigate(ROUTES.HOME);
     }
   }, [session, sessionId]);
