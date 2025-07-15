@@ -1,24 +1,25 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
-import { getDifficulty, getSession,  } from '../services/wordApi';
+import { getDifficulty, getSession, } from '../services/wordApi';
 import DifficultyList from '../components/difficultyList/difficultyLIst';
 import SelectedDifficulty from '../components/selectedDifficulty/selectedDifficulty';
+import Header from '../components/header/header';
+import Spinner from '../components/spinner/spinner';
 import { toast } from 'react-toastify';
 
 
 export default function HomePage() {
     const navigate = useNavigate();
-    const [loading, setLoading] = useState(false);
     const [loadingDifficulties, setLoadingDifficulties] = useState(false);
     const [difficulties, setDifficulties] = useState([]);
     const [selectedDifficulty, setSelectedDifficulty] = useState(null);
 
     const fetchDifficulties = async () => {
-        try { 
+        try {
             setLoadingDifficulties(true);
-            const res = await getDifficulty(); 
-            setDifficulties(res); 
-            setLoadingDifficulties(false); 
+            const res = await getDifficulty();
+            setDifficulties(res);
+            setLoadingDifficulties(false);
         } catch (error) {
             toast.error("Error fetching difficulties");
         }
@@ -40,15 +41,14 @@ export default function HomePage() {
 
     return (
         <div>
-            {/* Hacer un componente para el titulo y la foto */}
-            <h1 className="title">Wordle</h1>
+            {<Header />}
             <div>
                 {loadingDifficulties ? (
-                    <p>Cargando dificultades...</p> 
+                    < Spinner />
                 ) : selectedDifficulty ? (
-                    <SelectedDifficulty selectedDifficulty={selectedDifficulty} onReset={setSelectedDifficulty} onPlay={handlepLay}/>
+                    <SelectedDifficulty selectedDifficulty={selectedDifficulty} onReset={setSelectedDifficulty} onPlay={handlepLay} />
                 ) : (
-                    <DifficultyList difficulties={difficulties} onSelect={setSelectedDifficulty}/>
+                    <DifficultyList difficulties={difficulties} onSelect={setSelectedDifficulty} />
                 )}
             </div>
         </div>
