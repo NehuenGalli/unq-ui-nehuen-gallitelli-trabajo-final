@@ -62,7 +62,7 @@ export default function GamePage() {
         toast.error("¡Perdiste!");
         setGameStatus("lost");
         localStorage.removeItem("session");
-        navigate(ROUTES.GAME_LOST);
+        navigate(ROUTES.GAME_OVER);
       }
 
       setCurrentGuess("");
