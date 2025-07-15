@@ -6,8 +6,8 @@ export default function Header({ showSubtitle = true }) {
         <header className="header">
             <div className="header-top-row">
                 <img
-                    src="Wordle_Logo.svg"
-                    alt="Wordle Logo"
+                    src="wordle-icon.svg"
+                    alt="Wordle Icon"
                     className="header-logo"
                 />
                 <h1 className="header-title">Wordle</h1>
