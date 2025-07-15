@@ -10,10 +10,10 @@ export default function GamePage() {
   const { sessionId } = useParams();
   const navigate = useNavigate();
 
-  const [session, setSession] = useState(() => {
-    const savedSession = JSON.parse(localStorage.getItem("session"));
-    return savedSession?.sessionId === sessionId ? savedSession : null;
-  });
+  const session = (() => {
+    const saved = JSON.parse(localStorage.getItem("session"));
+    return saved?.sessionId === sessionId ? saved : null;
+  })();
 
   const [currentGuess, setCurrentGuess] = useState("");
   const [guesses, setGuesses] = useState([]);
@@ -33,7 +33,7 @@ export default function GamePage() {
           toast.error(`The word must have ${wordLength} letters`);
           return;
         }
-        submitGuess(currentGuess); 
+        submitGuess(currentGuess);
       } else if (key === "⌫") {
         setCurrentGuess((prev) => prev.slice(0, -1));
       } else if (/^[A-Z]$/.test(key) && currentGuess.length < wordLength) {
