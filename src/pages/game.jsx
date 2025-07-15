@@ -57,12 +57,12 @@ export default function GamePage() {
         toast.success("¡Adivinaste la palabra!");
         setGameStatus("won");
         localStorage.removeItem("session");
-        navigate("/win");
+        navigate(ROUTES.GAME_WIN);
       } else if (guesses.length + 1 >= maxTries) {
         toast.error("¡Perdiste!");
         setGameStatus("lost");
         localStorage.removeItem("session");
-        navigate("/game-over");
+        navigate(ROUTES.GAME_LOST);
       }
 
       setCurrentGuess("");

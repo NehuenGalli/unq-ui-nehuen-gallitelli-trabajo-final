@@ -8,7 +8,6 @@ const api = axios.create({
 const getDifficulty = async () => {
   try {
     const response = await api.get(ROUTES_API.DIFFICULTIES);
-    console.log(response.data + "Desde la Api");
     return response.data;
   } catch (error) {
     throw error;

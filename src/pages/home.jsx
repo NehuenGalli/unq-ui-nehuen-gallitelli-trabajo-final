@@ -5,6 +5,7 @@ import DifficultyList from '../components/difficultyList/difficultyLIst';
 import SelectedDifficulty from '../components/selectedDifficulty/selectedDifficulty';
 import Header from '../components/header/header';
 import Spinner from '../components/spinner/spinner';
+import { ROUTES } from '../constants';
 import { toast } from 'react-toastify';
 
 
@@ -28,7 +29,7 @@ export default function HomePage() {
     const handlepLay = async () => {
         try {
             const session = await getSession(selectedDifficulty.id);
-            navigate(`/game/${session.sessionId}`);
+            navigate(ROUTES.GAME.replace(":sessionId", session.sessionId));
             localStorage.setItem("session", JSON.stringify(session));
         } catch (error) {
             toast.error("Error starting game");

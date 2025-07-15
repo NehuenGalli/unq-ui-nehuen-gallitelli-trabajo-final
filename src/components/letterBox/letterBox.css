@@ -14,21 +14,21 @@
   color: black;
 }
 
-/* Estado final después de la animación */
 .letter-box.correct {
   background-color: #6aaa64;
   color: white;
 }
+
 .letter-box.elsewhere {
   background-color: #c9b458;
   color: white;
 }
+
 .letter-box.absent {
   background-color: #787c7e;
   color: white;
 }
 
-/* Animación */
 .letter-box.flip {
   animation: flipIn 0.3s ease forwards;
   background-color: white;
@@ -39,10 +39,12 @@
   0% {
     transform: rotateX(0deg);
   }
+
   50% {
     transform: rotateX(90deg);
     background-color: white;
   }
+
   100% {
     transform: rotateX(0deg);
   }
